@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>体重記録アプリ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <h1>体重記録</h1>
+    <form id="weight-form">
+      <input type="date" id="date" required />
+      <input type="number" id="weight" step="0.1" placeholder="体重 (kg)" required />
+      <button type="submit">記録する</button>
+    </form>
+    <!-- ...前略... -->
+<h2>記録一覧</h2>
+<ul id="record-list"></ul>
+
+<h2>体重グラフ</h2>
+<div class="chart-controls">
+  <label for="view-mode">表示単位：</label>
+  <select id="view-mode">
+    <option value="daily">日</option>
+    <option value="weekly">週</option>
+    <option value="monthly">月</option>
+    <option value="yearly">年</option>
+  </select>
+</div>
+<canvas id="weight-chart" width="400" height="200"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app.js"></script>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
